@@ -49,6 +49,7 @@ This project was built specifically to get comfortable typing real React pattern
 # Clone the repo
 git clone https://github.com/MeiadMajzoubi/A-simple-React-Todo-App-.git
 cd A-simple-React-Todo-App
+
 # Install dependencies
 npm install
 
