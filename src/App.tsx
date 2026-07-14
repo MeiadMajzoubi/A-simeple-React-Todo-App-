@@ -11,14 +11,14 @@ const App = () => {
     const savedTodos = localStorage.getItem("todos");
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
-  const [editingId, setEditingId] = useState<number | null>(null); 
+  const [editingId, setEditingId] = useState<number | null>(null);
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  const handleAddTodo = (e: React.FormEvent) => { 
+  const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!text.trim()) return;
@@ -76,23 +76,28 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Todo App</h1>
+    <div className="bg-gray-100 min-h-screen flex flex-col items-center py-20 px-4  ">
+      <div className="w-full max-w-lg flex flex-col gap-8 border-amber-600">
+        <h1 className="text-4xl font-semibold text-black text-center mb-10">
+          Todo App
+        </h1>
 
-      <TodoForm
-        text={text}
-        setText={setText}
-        handleAddTodo={handleAddTodo}
-        isEditing={isEditing}
-      />
+        <TodoForm
+          text={text}
+          setText={setText}
+          handleAddTodo={handleAddTodo}
+          isEditing={isEditing}
+        />
 
-      <TodoList
-        todos={todos}
-        handleDeleteTodo={handleDeleteTodo}
-        handleToggleTodo={handleToggleTodo}
-        handleEditTodo={handleEditTodo}
-      />
-      <p>{text}</p>
+        <TodoList
+          todos={todos}
+          handleDeleteTodo={handleDeleteTodo}
+          handleToggleTodo={handleToggleTodo}
+          handleEditTodo={handleEditTodo}
+        />
+      </div>
+
+      
     </div>
   );
 };

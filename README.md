@@ -1,63 +1,70 @@
-# Todo App — React + TypeScript
+# Todo App — React + TypeScript + Vite
 
-A small CRUD Todo application built to practice combining **React** with **TypeScript**. The focus of this project was type safety, component composition, and state management fundamentals — not UI styling (no CSS/design has been applied yet).
+A simple, clean Todo CRUD application built as a practice project to learn React, TypeScript, and component-driven architecture. Tasks persist locally using `localStorage`, and the UI is styled with Tailwind CSS.
 
-## ✨ Features
+## Features
 
-- **Add** new todos via a controlled form
-- **Edit** existing todos (form switches into "update" mode)
-- **Toggle** a todo's completed state (click the text)
-- **Delete** todos
-- **Persistence** — todos are saved to and loaded from `localStorage`, so data survives page refreshes
+- ✅ Create, edit, and delete todos
+- 💾 Persistent storage via `localStorage`
+- 🎨 Styled with Tailwind CSS
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- [React](https://react.dev/) (functional components + hooks)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/) as the build tool
+- **React** — UI library
+- **TypeScript** — static typing
+- **Vite** — build tool / dev server
+- **Tailwind CSS** — utility-first styling
+- **ESLint** — code quality / linting
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── TodoForm.tsx   # Controlled input + submit button (add/update)
-│   ├── TodoItem.tsx   # Single todo row (toggle/edit/delete)
-│   └── TodoList.tsx   # Renders a list of TodoItem components
-├── types.ts           # Shared Todo interface
-├── App.tsx            # App state, handlers, localStorage sync
-├── main.tsx           # React entry point
-├── App.css
-└── index.css
+│   ├── TodoForm.tsx    # Input field + Add button
+│   ├── TodoItem.tsx    # Single todo row (Edit/Delete)
+│   └── TodoList.tsx    # Renders list of TodoItems
+├── App.tsx
+└── main.tsx
 ```
 
-## 🧠 What I Practiced
+## Getting Started
 
-This project was built specifically to get comfortable typing real React patterns, including:
+1. Clone the repo:
 
-- Defining shared types with an `interface` (`Todo`) and importing them across components
-- Typing component props with `type` aliases (`TodoFormProps`, `TodoItemProps`, `TodoListProps`)
-- Typing state with generics: `useState<Todo[]>(...)`
-- Typing event handlers: `React.FormEvent`, `React.Dispatch<React.SetStateAction<string>>`
-- Typing callback props passed down through multiple component layers (`TodoList` → `TodoItem`)
-- Syncing state to `localStorage` with `useEffect`
-- Basic CRUD state updates using array methods (`map`, `filter`) in an immutable style
+   ```bash
+   git clone https://github.com/MeiadMajzoubi/<repo-name>.git
+   cd <repo-name>
+   ```
 
-## 🚀 Getting Started
+2. Install dependencies:
 
-```bash
-# Clone the repo
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+   ```bash
+   npm install
+   ```
 
-# Install dependencies
-npm install
+3. Run the dev server:
 
-# Run the dev server
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
+4. Open the local URL shown in your terminal (usually `http://localhost:5173`).
 
-## 📄 License
+## What I Learned
 
-MIT
+- Managing state with `useState` and `useEffect`, and syncing it with `localStorage`
+- Passing and typing props across components with TypeScript
+- Structuring a small React app into reusable, single-responsibility components
+
+## Roadmap / Possible Improvements
+
+- [ ] Add due dates / priority levels
+- [ ] Add filtering (all / active / completed)
+- [ ] Animate list transitions
+- [ ] Migrate storage to a backend API
+
+## Author
+
+**Meiad Majzoubi**
+GitHub: [@MeiadMajzoubi](https://github.com/MeiadMajzoubi)
