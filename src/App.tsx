@@ -76,9 +76,9 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center py-20 px-4  ">
-      <div className="w-full max-w-lg flex flex-col gap-8 border-amber-600">
-        <h1 className="text-4xl font-semibold text-black text-center mb-10">
+    <div className=" font-zilla bg-gray-100 min-h-screen flex flex-col items-center py-20 px-4  ">
+      <div className=" w-full max-w-[380px] sm:max-w-[448px] md:max-w-[512px] lg:max-w-[600px] mx-auto flex flex-col gap-8 p-4 sm:p-6">
+        <h1 className=" font-racing text-4xl font-semibold text-black text-center mb-10 ">
           Todo App
         </h1>
 
@@ -96,8 +96,6 @@ const App = () => {
           handleEditTodo={handleEditTodo}
         />
       </div>
-
-      
     </div>
   );
 };

@@ -1,3 +1,22 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-racing: "Racing Sans One";
+  --font-zilla: "Zilla Slab"
+}
+
+@font-face {
+  font-family: "Racing Sans One";
+  src: url("./font/RacingSansOne-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("./font/ZillaSlab-Regular\ \(1\).woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
